@@ -1,0 +1,141 @@
+{
+  "n_samples": 569,
+  "n_malignant": 212,
+  "n_train": 455,
+  "n_test": 114,
+  "n_test_malignant": 42,
+  "single_split": {
+    "Logistic Regression": {
+      "accuracy": 0.9825,
+      "precision": 0.9762,
+      "recall": 0.9762,
+      "f1": 0.9762,
+      "roc_auc": 0.9954,
+      "missed_cancers": 1,
+      "false_alarms": 1,
+      "f1_benign_positive": 0.9861
+    },
+    "SVM": {
+      "accuracy": 0.9825,
+      "precision": 0.9762,
+      "recall": 0.9762,
+      "f1": 0.9762,
+      "roc_auc": 0.995,
+      "missed_cancers": 1,
+      "false_alarms": 1,
+      "f1_benign_positive": 0.9861
+    },
+    "Random Forest": {
+      "accuracy": 0.9561,
+      "precision": 0.9512,
+      "recall": 0.9286,
+      "f1": 0.9398,
+      "roc_auc": 0.9937,
+      "missed_cancers": 3,
+      "false_alarms": 2,
+      "f1_benign_positive": 0.9655
+    },
+    "Decision Tree": {
+      "accuracy": 0.9123,
+      "precision": 0.8478,
+      "recall": 0.9286,
+      "f1": 0.8864,
+      "roc_auc": 0.9157,
+      "missed_cancers": 3,
+      "false_alarms": 7,
+      "f1_benign_positive": 0.9286
+    }
+  },
+  "repeated_cv": {
+    "Logistic Regression": {
+      "accuracy_mean": 0.9789,
+      "accuracy_std": 0.0142,
+      "recall_mean": 0.9576,
+      "recall_std": 0.0336,
+      "roc_auc_mean": 0.9948,
+      "roc_auc_std": 0.0053
+    },
+    "SVM": {
+      "accuracy_mean": 0.9756,
+      "accuracy_std": 0.0135,
+      "recall_mean": 0.9585,
+      "recall_std": 0.0307,
+      "roc_auc_mean": 0.9952,
+      "roc_auc_std": 0.0047
+    },
+    "Random Forest": {
+      "accuracy_mean": 0.9578,
+      "accuracy_std": 0.0213,
+      "recall_mean": 0.9325,
+      "recall_std": 0.05,
+      "roc_auc_mean": 0.9897,
+      "roc_auc_std": 0.0086
+    },
+    "Decision Tree": {
+      "accuracy_mean": 0.9299,
+      "accuracy_std": 0.0235,
+      "recall_mean": 0.9071,
+      "recall_std": 0.0502,
+      "roc_auc_mean": 0.9253,
+      "roc_auc_std": 0.0276
+    }
+  },
+  "threshold": {
+    "target_recall": 0.99,
+    "chosen_threshold": 0.09,
+    "train_oof_at_0.5": {
+      "accuracy": 0.978,
+      "precision": 0.9762,
+      "recall": 0.9647,
+      "f1": 0.9704,
+      "roc_auc": 0.9954,
+      "missed_cancers": 6,
+      "false_alarms": 4
+    },
+    "train_oof_at_chosen": {
+      "accuracy": 0.9407,
+      "precision": 0.8667,
+      "recall": 0.9941,
+      "f1": 0.926,
+      "roc_auc": 0.9954,
+      "missed_cancers": 1,
+      "false_alarms": 26
+    },
+    "test_at_0.5": {
+      "accuracy": 0.9825,
+      "precision": 0.9762,
+      "recall": 0.9762,
+      "f1": 0.9762,
+      "roc_auc": 0.9954,
+      "missed_cancers": 1,
+      "false_alarms": 1,
+      "f1_benign_positive": 0.9861
+    },
+    "test_at_chosen": {
+      "accuracy": 0.8772,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "roc_auc": 0.9954,
+      "missed_cancers": 0,
+      "false_alarms": 14
+    }
+  },
+  "top_coefficients": {
+    "toward_malignant": {
+      "worst texture": 1.255,
+      "radius error": 1.083,
+      "worst concave points": 0.954,
+      "worst area": 0.948,
+      "worst radius": 0.948,
+      "worst symmetry": 0.939
+    },
+    "toward_benign": {
+      "mean compactness": -0.648,
+      "compactness error": -0.647,
+      "fractal dimension error": -0.438,
+      "symmetry error": -0.36,
+      "texture error": -0.249
+    }
+  }
+}
